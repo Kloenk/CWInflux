@@ -77,7 +77,7 @@ actor CWInflux {
         scheduled = false
         do {
             try await flush(points: newPoints)
-            CWInflux.logger.debug("wrote \(newPoints.count) data points")
+            CWInflux.logger.debug("wrote \(self.newPoints.count) data points")
             newPoints = []
         } catch {
             CWInflux.logger.warning("Failed to write points: \(error.localizedDescription)")

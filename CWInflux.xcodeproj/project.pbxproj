@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		95452AB627DF850400A47D81 /* CWInflux.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95452AB527DF850400A47D81 /* CWInflux.swift */; };
-		95452ABF27DF858900A47D81 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 95452ABE27DF858900A47D81 /* ArgumentParser */; };
 		95452AC727DF8DA400A47D81 /* WriteApi+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95452AC627DF8DA400A47D81 /* WriteApi+Async.swift */; };
 		95452ACD27DF91F600A47D81 /* InfluxDBSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 95452ACC27DF91F600A47D81 /* InfluxDBSwift */; };
 		95452ACE27DF921200A47D81 /* CoreWLAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95452AC427DF890800A47D81 /* CoreWLAN.framework */; };
 		95452AD227DF971100A47D81 /* CWEventDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95452AD127DF971100A47D81 /* CWEventDelegate.swift */; };
+		95452AD827DFD4FB00A47D81 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 95452AD727DFD4FB00A47D81 /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,9 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95452AD827DFD4FB00A47D81 /* ArgumentParser in Frameworks */,
 				95452ACE27DF921200A47D81 /* CoreWLAN.framework in Frameworks */,
 				95452ACD27DF91F600A47D81 /* InfluxDBSwift in Frameworks */,
-				95452ABF27DF858900A47D81 /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,8 +107,8 @@
 			);
 			name = CWInflux;
 			packageProductDependencies = (
-				95452ABE27DF858900A47D81 /* ArgumentParser */,
 				95452ACC27DF91F600A47D81 /* InfluxDBSwift */,
+				95452AD727DFD4FB00A47D81 /* ArgumentParser */,
 			);
 			productName = CWInflux;
 			productReference = 95452AB227DF850400A47D81 /* CWInflux */;
@@ -139,8 +139,8 @@
 			);
 			mainGroup = 95452AA927DF850400A47D81;
 			packageReferences = (
-				95452ABD27DF858900A47D81 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
 				95452AC027DF860C00A47D81 /* XCRemoteSwiftPackageReference "influxdb-client-swift" */,
+				95452AD627DFD4FB00A47D81 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
 			);
 			productRefGroup = 95452AB327DF850400A47D81 /* Products */;
 			projectDirPath = "";
@@ -298,7 +298,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3YM32478AN;
+				DEVELOPMENT_TEAM = T58RJ7QENS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = CWInflux/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
@@ -318,7 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3YM32478AN;
+				DEVELOPMENT_TEAM = T58RJ7QENS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = CWInflux/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
@@ -369,14 +369,17 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		95452AD627DFD4FB00A47D81 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		95452ABE27DF858900A47D81 /* ArgumentParser */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95452ABD27DF858900A47D81 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
-			productName = ArgumentParser;
-		};
 		95452AC827DF8FB600A47D81 /* ArgumentParser */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 95452ABD27DF858900A47D81 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
@@ -391,6 +394,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 95452AC027DF860C00A47D81 /* XCRemoteSwiftPackageReference "influxdb-client-swift" */;
 			productName = InfluxDBSwift;
+		};
+		95452AD727DFD4FB00A47D81 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95452AD627DFD4FB00A47D81 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

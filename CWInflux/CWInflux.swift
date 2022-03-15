@@ -11,7 +11,7 @@ import Foundation
 import InfluxDBSwift
 
 @main
-struct CWInfluxCommand: ParsableCommand {
+struct CWInfluxCommand: AsyncParsableCommand {
     @Option(name: .shortAndLong, help: "The name or id of the bucket destination.")
     var bucket: String
 
